@@ -10,6 +10,7 @@
 */
 
 //CODE HERE
+const gitDefinition = "Git is the most popular version control system. It is used to record the changes of a project in a repository and keeps the history of the changes. It also has checkpoints of the project and helps with collaborative coding.";
 
 //////////////////PROBLEM 2////////////////////
 /*
@@ -18,6 +19,7 @@
 */
 
 //CODE HERE
+const gitHubDefinition = "Github is the website that allows you to upload and download your git repositories like a cloud service.";
 
 //////////////////PROBLEM 3////////////////////
 /*

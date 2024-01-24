@@ -50,6 +50,22 @@ const pinkPrice = .55
 */
 
 // CODE HERE
+//initialize totalAcres as an integer.
+let totalAcres = 0;
+
+//each for look goes through each index of the array and adds it to totalAcres.
+for (let i = 0; i < fujiAcres.length; i++) {
+    totalAcres += fujiAcres[i];
+}
+for (let i = 0; i < galaAcres.length; i++) {
+    totalAcres += galaAcres[i];
+}
+for (let i = 0; i < pinkAcres.length; i++) {
+    totalAcres += pinkAcres[i];
+}
+
+//print totalAcres to console.
+console.log(totalAcres);
 
 
 
@@ -68,6 +84,9 @@ const pinkPrice = .55
 */
 
 // CODE HERE
+//initialize averageDailyAcres with the average formula (sum of values / num of values)
+let averageDailyAcres = totalAcres / 7;
+console.log(averageDailyAcres);
 
 
 
@@ -106,7 +125,15 @@ let acresLeft = 174
 let days = 0
 
 // CODE HERE
-
+//while loop that runs until acresLeft is 0 or less
+while (acresLeft > 0) {
+    //increment days by 1;
+    days++;
+    //subtract acresLeft by averageDailyAcres, this is how the while loop will stop executing.
+    acresLeft -= averageDailyAcres;
+}
+//print days to console.
+console.log(days);
 
 
 // PROBLEM 4
@@ -134,11 +161,25 @@ let days = 0
 */
 
 // CODE HERE
+//initialize the empty arrays.
+let fujiTons = [];
+let galaTons = [];
+let pinkTons = [];
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
-
+//the for loops will go through each element in the acres arrays and multiply it by 6.5 and push the given amount of tons of apples into the tons arrays
+for (let i = 0; i < fujiAcres.length; i++) {
+    fujiTons.push(fujiAcres[i] * 6.5);
+}
+for (let i = 0; i < galaAcres.length; i++) {
+    galaTons.push(galaAcres[i] * 6.5);
+}
+for (let i = 0; i < pinkAcres.length; i++) {
+    pinkTons.push(pinkAcres[i] * 6.5);
+}
+//prints the tons arrays to the console.
+console.log(fujiTons);
+console.log(galaTons);
+console.log(pinkTons);
 
 
 
@@ -161,11 +202,30 @@ let days = 0
 */
 
 // CODE HERE 
+//initialize the pound variables.
+let fujiPounds = 0;
+let galaPounds = 0;
+let pinkPounds = 0;
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+//for loops goes through each element in the tons arrays and adds it to the pounds array.
+for (let i = 0; i < fujiTons.length; i++) {
+    fujiPounds += fujiTons[i];
+}
+//converts the total tons into total pounds.
+fujiPounds *= 2000;
+for (let i = 0; i < galaTons.length; i++) {
+    galaPounds += galaTons[i];
+}
+galaPounds *= 2000;
+for (let i = 0; i < pinkTons.length; i++) {
+    pinkPounds += pinkTons[i];
+}
+pinkPounds *= 2000;
 
+//print the pounds to console.
+console.log(fujiPounds);
+console.log(galaPounds);
+console.log(pinkPounds);
 
 
 
@@ -188,11 +248,15 @@ let days = 0
 */
 
 // CODE HERE
+//calculate the proft of each type of apple by multiplying the pounds by the price.
+let fujiProfit = fujiPounds * fujiPrice;
+let galaProfit = galaPounds * galaPrice;
+let pinkProfit = pinkPounds * pinkPrice;
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
-
+//print the profits to console.
+console.log(fujiProfit);
+console.log(galaProfit);
+console.log(pinkProfit);
 
 
 
@@ -209,3 +273,8 @@ let days = 0
 */
 
 // CODE HERE
+//initialize totalProfit and calculate total profit by adding all of the profits
+let totalProfit = fujiProfit + galaProfit + pinkProfit;
+
+//print totalProfit to console.
+console.log(totalProfit);
